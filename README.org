@@ -1,4 +1,42 @@
-#+title: A repository made to practice Git/GitHub
+#+title: Git and Github
 
-* Keep Praciticing!
-A nice practice
+* Initialize
+#+begin_src bash
+git init
+#+end_src
+* See changes in the folder
++ The "??" symbols means that those files or folders have not been added to stage where is being tracked by git
++ The symbol "A" means the file/folder is already being tracked by git because of it being in the stage area
++ The symbol "M" in color red means the stagged file/folder was modified, and those changes have not being reported to the stage area by the user
++ The symbol "M" in color green means the stagged file/folder was modified, and those changes were already reported to the stage area by the user
+#+begin_src bash
+git status -s
+#+end_src
+* Add elements to stage
++ The add command send the element to the stage area. Therefore, the next time you write the previous command, instead of the symbols "??", it will appear and "A" symbol
+#+begin_src bash
+git add index.html
+git add .
+#+end_src
+* Creating the first instant copy of the proyect or staged elements
+#+begin_src bash
+git commit -m "my new message to identify this commit"
+#+end_src
+* Creating a commit and pushing the elements to the stage area with only one command
+#+begin_src bash
+git commit -am "Description of the changes for this commit"
+#+end_src
+* Fixing the description message of last commit
+#+begin_src bash
+git commit --amend
+#+end_src
+* See all the copies made by git for the project
+#+begin_src bash
+git log --oneline
+#+end_src
+* Return the project to an earlier stage or copy
++ The alphanumeric thing at the end is just an example about a possible visible value from git log in order to return to the expected git copy
++ This command delete all the copies that comes after the selected commit or copy. You return in the time, as if all those commits have never existed before
+#+begin_src bash
+git reset --hard 01cdac6
+#+end_src
