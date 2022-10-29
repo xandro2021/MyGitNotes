@@ -1,0 +1,4 @@
+#+title: A repository made to practice Git/GitHub
+
+* Keep Praciticing!
+A nice practice
