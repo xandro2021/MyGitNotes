@@ -59,3 +59,13 @@ git log --oneline
 #+begin_src bash
 git checkout nameOfMyBranch
 #+end_src
+** Merge a branch
++ Return to the main branch and then use the command merge
+#+begin_src bash
+git checkout main
+git merge nameOfMyBranch
+#+end_src
+** Delete a branch
+#+begin_src bash
+git branch -d nameOfMyBranch
+#+end_src
