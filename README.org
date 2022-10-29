@@ -44,3 +44,18 @@ git reset --hard 01cdac6
 #+begin_src bash
 git tag 29-10-22v1 -m "First Project Version"
 #+end_src
+* Branches
+** Creating a Branch
+#+begin_src bash
+git branch nameOfMyBranch
+#+end_src
+** See the existing branches
++ Both commands show the existing branches in the project, although it is more clear in git branch
+#+begin_src bash
+git branch
+git log --oneline
+#+end_src
+** Change the current branch you are working on
+#+begin_src bash
+git checkout nameOfMyBranch
+#+end_src
