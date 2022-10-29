@@ -40,3 +40,7 @@ git log --oneline
 #+begin_src bash
 git reset --hard 01cdac6
 #+end_src
+* Creating a Tag for Github
+#+begin_src bash
+git tag 29-10-22v1 -m "First Project Version"
+#+end_src
