@@ -5,6 +5,7 @@
 - [[#preintroductory-commands][PreIntroductory Commands]]
   - [[#check-git-version][Check Git Version]]
   - [[#getting-help-with-git][Getting Help with Git]]
+  - [[#setting-git-user][Setting git user]]
 - [[#git][GIT]]
   - [[#initialize][Initialize]]
   - [[#see-the-changes-in-the-folder][See the changes in the folder]]
@@ -24,9 +25,27 @@
 git --version
 #+end_src
 ** Getting Help with Git
+*** General Help for all the commands in git
 #+begin_src bash
 git help
 man git
+#+end_src
+*** Help for a specific command
+#+begin_src bash
+git help commit
+#+end_src
+** Setting git user
+*** Setting the name
+#+begin_src bash
+git config --global user.name "Alejandro Salazar"
+#+end_src
+*** Setting the email
+#+begin_src bash
+git config --global user.email "myemail@gmail.com"
+#+end_src
+*** To see the changes in the git user
+#+begin_src bash
+git config --global -e
 #+end_src
 * GIT
 ** Initialize
