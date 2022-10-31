@@ -94,8 +94,16 @@ git status -s
 ** Add elements in the staged area
 + Command use to stage the untracked files to be ready for the commit
 + The add command send the element to the stage area. Therefore, the next time you write the previous command, instead of the symbols "??", it will appear and "A" symbol
+*** Single Element
 #+begin_src bash
 git add index.html
+#+end_src
+*** Add all the untracked files of one type
+#+begin_src bash
+git add *.html
+#+end_src
+*** Add all the untracked files (Everything)
+#+begin_src bash
 git add .
 #+end_src
 ** Remove elements from the staged area
