@@ -1,7 +1,12 @@
 #+title: Git and Github
 #+author: Alejandro Salazar
 
+* About
+#+CAPTION: A cool free image about GitHub
+#+NAME: GitHub
+[[file:git.png][gitImage]]
 * Menu :toc:
+- [[#about][About]]
 - [[#preintroductory-commands][PreIntroductory Commands]]
   - [[#check-git-version][Check Git Version]]
   - [[#getting-help-with-git][Getting Help with Git]]
