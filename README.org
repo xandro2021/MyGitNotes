@@ -58,6 +58,10 @@ git config --global user.name "Alejandro Salazar"
 #+begin_src bash
 git config --global user.email "myemail@gmail.com"
 #+end_src
+*** Setting main branch
+#+begin_src bash
+git config --global init.defaultBranch main
+#+end_src
 *** To see the changes in the git user
 + You can even modify all the current config from there instead of writing the commands again
 #+begin_src bash
@@ -147,6 +151,11 @@ git branch
 git log --oneline
 # only shows the current branch
 git status
+#+end_src
+*** Rename a branch
++ You can do it globally for all the projects with this [[Setting main branch][command]]
+#+begin_src bash
+git branch -m currentName newName
 #+end_src
 *** Change the current branch you are working on
 #+begin_src bash
