@@ -8,12 +8,15 @@
   - [[#setting-git-user][Setting git user]]
 - [[#git][GIT]]
   - [[#initialize][Initialize]]
+  - [[#git-status][Git Status]]
   - [[#see-the-changes-in-the-folder][See the changes in the folder]]
-  - [[#add-elements-in-the-stage-area][Add elements in the stage area]]
+  - [[#add-elements-in-the-staged-area][Add elements in the staged area]]
+  - [[#remove-elements-from-the-staged-area][Remove elements from the staged area]]
   - [[#creating-the-first-instant-copy-of-the-proyect-or-staged-elements][Creating the first instant copy of the proyect or staged elements]]
   - [[#creating-a-commit-and-pushing-the-elements-to-the-stage-area-with-only-one-command][Creating a commit and pushing the elements to the stage area with only one command]]
   - [[#fixing-the-description-message-of-last-commit][Fixing the description message of last commit]]
   - [[#see-all-the-copies-made-by-git-for-the-project][See all the copies made by git for the project]]
+  - [[#return-the-project-to-and-earier-stage][Return the project to and earier stage]]
   - [[#return-the-project-to-an-earlier-stage-or-copy][Return the project to an earlier stage or copy]]
   - [[#creating-a-tag-for-github][Creating a Tag for Github]]
   - [[#branches][Branches]]
@@ -44,13 +47,25 @@ git config --global user.name "Alejandro Salazar"
 git config --global user.email "myemail@gmail.com"
 #+end_src
 *** To see the changes in the git user
++ You can even modify all the current config from there instead of writing the commands again
 #+begin_src bash
 git config --global -e
 #+end_src
 * GIT
 ** Initialize
++ Turn the current folder you are working on into a git repository
++ This command will create the hidden folder .git
++ Create the local repository
 #+begin_src bash
 git init
+#+end_src
+** Git Status
++ This command gives information about the current branch you are working on
++ It also notifies which files in the current repository are untracked by git
++ It also notifies about the files which are ready to be commited (the staged files)
++ It shows all the files within the repository that have been modified including staged and untracked files
+#+begin_src bash
+git status
 #+end_src
 ** See the changes in the folder
 + The "??" symbols means that those files or folders have not been added to stage where is being tracked by git
@@ -60,13 +75,22 @@ git init
 #+begin_src bash
 git status -s
 #+end_src
-** Add elements in the stage area
+** Add elements in the staged area
++ Command use to stage the untracked files to be ready for the commit
 + The add command send the element to the stage area. Therefore, the next time you write the previous command, instead of the symbols "??", it will appear and "A" symbol
 #+begin_src bash
 git add index.html
 git add .
 #+end_src
+** Remove elements from the staged area
++ Any of the two commands unstaged the desired file
+#+begin_src bash
+git reset fileName
+git rm --cached fileName
+#+end_src
 ** Creating the first instant copy of the proyect or staged elements
++ Take a picture of the current repository which saves the current staged files
++ Create a historical register of the repository with all the changes made in the staged files
 #+begin_src bash
 git commit -m "my new message to identify this commit"
 #+end_src
@@ -81,6 +105,12 @@ git commit --amend
 ** See all the copies made by git for the project
 #+begin_src bash
 git log --oneline
+#+end_src
+** Return the project to and earier stage
++ Rebuild or return the project exactly as it was in the last commit
++ It restore everything except the untracked filed
+#+begin_src bash
+git checkout -- .
 #+end_src
 ** Return the project to an earlier stage or copy
 + The alphanumeric thing at the end is just an example about a possible visible value from git log in order to return to the expected git copy
@@ -99,9 +129,12 @@ git branch nameOfMyBranch
 #+end_src
 *** See the existing branches
 + Both commands show the existing branches in the project, although it is more clear in git branch
++ Git branch list all the branches and mark the exact branch you are currently working on
 #+begin_src bash
 git branch
 git log --oneline
+# only shows the current branch
+git status
 #+end_src
 *** Change the current branch you are working on
 #+begin_src bash
