@@ -16,7 +16,7 @@
   - [[#creating-a-commit-and-pushing-the-elements-to-the-stage-area-with-only-one-command][Creating a commit and pushing the elements to the stage area with only one command]]
   - [[#fixing-the-description-message-of-last-commit][Fixing the description message of last commit]]
   - [[#see-all-the-copies-made-by-git-for-the-project][See all the copies made by git for the project]]
-  - [[#return-the-project-to-and-earier-stage][Return the project to and earier stage]]
+  - [[#return-the-project-to-and-earlier-stage][Return the project to and earlier stage]]
   - [[#return-the-project-to-an-earlier-stage-or-copy][Return the project to an earlier stage or copy]]
   - [[#creating-a-tag-for-github][Creating a Tag for Github]]
   - [[#branches][Branches]]
@@ -106,7 +106,7 @@ git commit --amend
 #+begin_src bash
 git log --oneline
 #+end_src
-** Return the project to and earier stage
+** Return the project to and earlier stage
 + Rebuild or return the project exactly as it was in the last commit
 + It restore everything except the untracked filed
 #+begin_src bash
