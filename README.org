@@ -4,7 +4,7 @@
 * Menu :toc:
 - [[#initialize][Initialize]]
 - [[#see-the-changes-in-the-folder][See the changes in the folder]]
-- [[#add-elements-to-stage][Add elements to stage]]
+- [[#add-elements-in-the-stage-area][Add elements in the stage area]]
 - [[#creating-the-first-instant-copy-of-the-proyect-or-staged-elements][Creating the first instant copy of the proyect or staged elements]]
 - [[#creating-a-commit-and-pushing-the-elements-to-the-stage-area-with-only-one-command][Creating a commit and pushing the elements to the stage area with only one command]]
 - [[#fixing-the-description-message-of-last-commit][Fixing the description message of last commit]]
@@ -30,7 +30,7 @@ git init
 #+begin_src bash
 git status -s
 #+end_src
-* Add elements to stage
+* Add elements in the stage area
 + The add command send the element to the stage area. Therefore, the next time you write the previous command, instead of the symbols "??", it will appear and "A" symbol
 #+begin_src bash
 git add index.html
