@@ -6,7 +6,7 @@
 #+CAPTION: A cool free image about GitHub
 #+attr_html: :width 50 px
 #+attr_html: :height 50 px
-[[file:git.png][image]]
+#+html: <p align="center"><img src="./git.png" /></p>
 * Menu :toc:
 - [[#about][About]]
 - [[#preintroductory-commands][PreIntroductory Commands]]
