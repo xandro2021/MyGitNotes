@@ -2,8 +2,10 @@
 #+author: Alejandro Salazar
 
 * About
-#+CAPTION: A cool free image about GitHub
 #+NAME: GitHub
+#+CAPTION: A cool free image about GitHub
+#+attr_html: :width 50 px
+#+attr_html: :height 50 px
 [[file:git.png][gitImage]]
 * Menu :toc:
 - [[#about][About]]
