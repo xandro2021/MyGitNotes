@@ -2,13 +2,18 @@
 #+author: Alejandro Salazar
 
 * About
+** Cover
 #+NAME: GitHub
 #+CAPTION: A cool free image about GitHub
 #+attr_html: :width 50 px
 #+attr_html: :height 50 px
 #+html: <p align="center"><img src="./git.png" /></p>
+** Description
+This is just a list of git commands to help me to remember and learn them
 * Menu :toc:
 - [[#about][About]]
+  - [[#cover][Cover]]
+  - [[#description][Description]]
 - [[#preintroductory-commands][PreIntroductory Commands]]
   - [[#check-git-version][Check Git Version]]
   - [[#getting-help-with-git][Getting Help with Git]]
