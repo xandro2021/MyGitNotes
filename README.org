@@ -15,6 +15,7 @@
   - [[#creating-a-branch][Creating a Branch]]
   - [[#see-the-existing-branches][See the existing branches]]
   - [[#change-the-current-branch-you-are-working-on][Change the current branch you are working on]]
+  - [[#create-and-immediately-change-into-the-new-branch][Create and immediately change into the new branch]]
   - [[#merge-a-branch][Merge a branch]]
   - [[#delete-a-branch][Delete a branch]]
 
@@ -76,6 +77,10 @@ git log --oneline
 ** Change the current branch you are working on
 #+begin_src bash
 git checkout nameOfMyBranch
+#+end_src
+** Create and immediately change into the new branch
+#+begin_src bash
+git checkout -b nameOfMyBranch
 #+end_src
 ** Merge a branch
 + Return to the main branch and then use the command merge
