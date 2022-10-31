@@ -1,5 +1,22 @@
 #+title: Git and Github
 
+* Menu :toc:
+- [[#initialize][Initialize]]
+- [[#see-changes-in-the-folder][See changes in the folder]]
+- [[#add-elements-to-stage][Add elements to stage]]
+- [[#creating-the-first-instant-copy-of-the-proyect-or-staged-elements][Creating the first instant copy of the proyect or staged elements]]
+- [[#creating-a-commit-and-pushing-the-elements-to-the-stage-area-with-only-one-command][Creating a commit and pushing the elements to the stage area with only one command]]
+- [[#fixing-the-description-message-of-last-commit][Fixing the description message of last commit]]
+- [[#see-all-the-copies-made-by-git-for-the-project][See all the copies made by git for the project]]
+- [[#return-the-project-to-an-earlier-stage-or-copy][Return the project to an earlier stage or copy]]
+- [[#creating-a-tag-for-github][Creating a Tag for Github]]
+- [[#branches][Branches]]
+  - [[#creating-a-branch][Creating a Branch]]
+  - [[#see-the-existing-branches][See the existing branches]]
+  - [[#change-the-current-branch-you-are-working-on][Change the current branch you are working on]]
+  - [[#merge-a-branch][Merge a branch]]
+  - [[#delete-a-branch][Delete a branch]]
+
 * Initialize
 #+begin_src bash
 git init
