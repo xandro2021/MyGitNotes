@@ -153,7 +153,8 @@ git log --oneline
 git status
 #+end_src
 *** Rename a branch
-+ You can do it globally for all the projects with this #+html: <li><a href="#user-content-setting-main-branch">Command</a></li>
++ You can do it globally for all the projects with this
+#+html: <li><a href="#user-content-setting-main-branch">Command</a></li>
 #+begin_src bash
 git branch -m currentName newName
 #+end_src
