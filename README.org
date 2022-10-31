@@ -2,28 +2,38 @@
 #+author: Alejandro Salazar
 
 * Menu :toc:
-- [[#initialize][Initialize]]
-- [[#see-the-changes-in-the-folder][See the changes in the folder]]
-- [[#add-elements-in-the-stage-area][Add elements in the stage area]]
-- [[#creating-the-first-instant-copy-of-the-proyect-or-staged-elements][Creating the first instant copy of the proyect or staged elements]]
-- [[#creating-a-commit-and-pushing-the-elements-to-the-stage-area-with-only-one-command][Creating a commit and pushing the elements to the stage area with only one command]]
-- [[#fixing-the-description-message-of-last-commit][Fixing the description message of last commit]]
-- [[#see-all-the-copies-made-by-git-for-the-project][See all the copies made by git for the project]]
-- [[#return-the-project-to-an-earlier-stage-or-copy][Return the project to an earlier stage or copy]]
-- [[#creating-a-tag-for-github][Creating a Tag for Github]]
-- [[#branches][Branches]]
-  - [[#creating-a-branch][Creating a Branch]]
-  - [[#see-the-existing-branches][See the existing branches]]
-  - [[#change-the-current-branch-you-are-working-on][Change the current branch you are working on]]
-  - [[#create-and-immediately-change-into-the-new-branch][Create and immediately change into the new branch]]
-  - [[#merge-a-branch][Merge a branch]]
-  - [[#delete-a-branch][Delete a branch]]
+- [[#preintroductory-commands][PreIntroductory Commands]]
+  - [[#check-git-version][Check Git Version]]
+  - [[#getting-help-with-git][Getting Help with Git]]
+- [[#git][GIT]]
+  - [[#initialize][Initialize]]
+  - [[#see-the-changes-in-the-folder][See the changes in the folder]]
+  - [[#add-elements-in-the-stage-area][Add elements in the stage area]]
+  - [[#creating-the-first-instant-copy-of-the-proyect-or-staged-elements][Creating the first instant copy of the proyect or staged elements]]
+  - [[#creating-a-commit-and-pushing-the-elements-to-the-stage-area-with-only-one-command][Creating a commit and pushing the elements to the stage area with only one command]]
+  - [[#fixing-the-description-message-of-last-commit][Fixing the description message of last commit]]
+  - [[#see-all-the-copies-made-by-git-for-the-project][See all the copies made by git for the project]]
+  - [[#return-the-project-to-an-earlier-stage-or-copy][Return the project to an earlier stage or copy]]
+  - [[#creating-a-tag-for-github][Creating a Tag for Github]]
+  - [[#branches][Branches]]
 
-* Initialize
+* PreIntroductory Commands
+** Check Git Version
++ Useful to see the current git version of if it is not installed at all
+#+begin_src bash
+git --version
+#+end_src
+** Getting Help with Git
+#+begin_src bash
+git help
+man git
+#+end_src
+* GIT
+** Initialize
 #+begin_src bash
 git init
 #+end_src
-* See the changes in the folder
+** See the changes in the folder
 + The "??" symbols means that those files or folders have not been added to stage where is being tracked by git
 + The symbol "A" means the file/folder is already being tracked by git because of it being in the stage area
 + The symbol "M" in color red means the stagged file/folder was modified, and those changes have not being reported to the stage area by the user
@@ -31,64 +41,64 @@ git init
 #+begin_src bash
 git status -s
 #+end_src
-* Add elements in the stage area
+** Add elements in the stage area
 + The add command send the element to the stage area. Therefore, the next time you write the previous command, instead of the symbols "??", it will appear and "A" symbol
 #+begin_src bash
 git add index.html
 git add .
 #+end_src
-* Creating the first instant copy of the proyect or staged elements
+** Creating the first instant copy of the proyect or staged elements
 #+begin_src bash
 git commit -m "my new message to identify this commit"
 #+end_src
-* Creating a commit and pushing the elements to the stage area with only one command
+** Creating a commit and pushing the elements to the stage area with only one command
 #+begin_src bash
 git commit -am "Description of the changes for this commit"
 #+end_src
-* Fixing the description message of last commit
+** Fixing the description message of last commit
 #+begin_src bash
 git commit --amend
 #+end_src
-* See all the copies made by git for the project
+** See all the copies made by git for the project
 #+begin_src bash
 git log --oneline
 #+end_src
-* Return the project to an earlier stage or copy
+** Return the project to an earlier stage or copy
 + The alphanumeric thing at the end is just an example about a possible visible value from git log in order to return to the expected git copy
 + This command delete all the copies that comes after the selected commit or copy. You return in the time, as if all those commits have never existed before
 #+begin_src bash
 git reset --hard 01cdac6
 #+end_src
-* Creating a Tag for Github
+** Creating a Tag for Github
 #+begin_src bash
 git tag 29-10-22v1 -m "First Project Version"
 #+end_src
-* Branches
-** Creating a Branch
+** Branches
+*** Creating a Branch
 #+begin_src bash
 git branch nameOfMyBranch
 #+end_src
-** See the existing branches
+*** See the existing branches
 + Both commands show the existing branches in the project, although it is more clear in git branch
 #+begin_src bash
 git branch
 git log --oneline
 #+end_src
-** Change the current branch you are working on
+*** Change the current branch you are working on
 #+begin_src bash
 git checkout nameOfMyBranch
 #+end_src
-** Create and immediately change into the new branch
+*** Create and immediately change into the new branch
 #+begin_src bash
 git checkout -b nameOfMyBranch
 #+end_src
-** Merge a branch
+*** Merge a branch
 + Return to the main branch and then use the command merge
 #+begin_src bash
 git checkout main
 git merge nameOfMyBranch
 #+end_src
-** Delete a branch
+*** Delete a branch
 #+begin_src bash
 git branch -d nameOfMyBranch
 #+end_src
