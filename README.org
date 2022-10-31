@@ -3,7 +3,7 @@
 
 * Menu :toc:
 - [[#initialize][Initialize]]
-- [[#see-changes-in-the-folder][See changes in the folder]]
+- [[#see-the-changes-in-the-folder][See the changes in the folder]]
 - [[#add-elements-to-stage][Add elements to stage]]
 - [[#creating-the-first-instant-copy-of-the-proyect-or-staged-elements][Creating the first instant copy of the proyect or staged elements]]
 - [[#creating-a-commit-and-pushing-the-elements-to-the-stage-area-with-only-one-command][Creating a commit and pushing the elements to the stage area with only one command]]
@@ -22,7 +22,7 @@
 #+begin_src bash
 git init
 #+end_src
-* See changes in the folder
+* See the changes in the folder
 + The "??" symbols means that those files or folders have not been added to stage where is being tracked by git
 + The symbol "A" means the file/folder is already being tracked by git because of it being in the stage area
 + The symbol "M" in color red means the stagged file/folder was modified, and those changes have not being reported to the stage area by the user
