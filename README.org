@@ -28,11 +28,13 @@ This is just a list of git commands to help me to remember and learn them
   - [[#creating-the-first-instant-copy-of-the-proyect-or-staged-elements][Creating the first instant copy of the proyect or staged elements]]
   - [[#creating-a-commit-and-pushing-the-elements-to-the-stage-area-with-only-one-command][Creating a commit and pushing the elements to the stage area with only one command]]
   - [[#fixing-the-description-message-of-last-commit][Fixing the description message of last commit]]
+  - [[#include-the-new-changes-in-the-last-commit-instead-of-creating-a-new-commit][Include the new changes in the last commit instead of creating a new commit]]
   - [[#see-all-the-copies-made-by-git-for-the-project][See all the copies made by git for the project]]
   - [[#return-the-project-to-an-earlier-stage][Return the project to an earlier stage]]
-  - [[#return-the-project-to-an-earlier-stage-or-copy][Return the project to an earlier stage or copy]]
+  - [[#return-the-project-to-an-earlier-stage-or-copy-and-delete-the-unwanted-future][Return the project to an earlier stage or copy and Delete the unwanted future!!]]
   - [[#creating-a-tag-for-github][Creating a Tag for Github]]
   - [[#branches][Branches]]
+  - [[#git-diff][Git Diff]]
 
 * PreIntroductory Commands
 ** Check Git Version
@@ -159,6 +161,14 @@ git commit -am "Description of the changes for this commit"
 ** Fixing the description message of last commit
 #+begin_src bash
 git commit --amend
+git commit --amend -m "new description"
+#+end_src
+** Include the new changes in the last commit instead of creating a new commit
++ Beware! Reset hard delete the changes but the soft one doesn't
++ you can add a number after the symbol ^ to notify how many commits you want to go back
++ In other words, we preserved all the changes but return back to the desired commit in order to make a new commit which is going to include all those changes instead of creating new commits for the new additions
+#+begin_src bash
+git reset --soft HEAD^
 #+end_src
 ** See all the copies made by git for the project
 #+begin_src bash
@@ -170,7 +180,7 @@ git log --oneline
 #+begin_src bash
 git checkout -- .
 #+end_src
-** Return the project to an earlier stage or copy
+** Return the project to an earlier stage or copy and Delete the unwanted future!!
 + The alphanumeric thing at the end is just an example about a possible visible value from git log in order to return to the expected git copy
 + This command delete all the copies that comes after the selected commit or copy. You return in the time, as if all those commits have never existed before
 #+begin_src bash
@@ -216,4 +226,13 @@ git merge nameOfMyBranch
 *** Delete a branch
 #+begin_src bash
 git branch -d nameOfMyBranch
+#+end_src
+** Git Diff
+*** Show the modifications in the unstaged files
+#+begin_src bash
+git diff
+#+end_src
+*** Show the modifications made in the staged files
+#+begin_src bash
+git diff --staged
 #+end_src
