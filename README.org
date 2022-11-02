@@ -35,6 +35,7 @@ This is just a list of git commands to help me to remember and learn them
   - [[#tags][Tags]]
   - [[#branches][Branches]]
   - [[#git-diff][Git Diff]]
+  - [[#stash][Stash]]
 
 * PreIntroductory Commands
 ** Check Git Version
@@ -305,4 +306,51 @@ git diff
 *** Show the modifications made in the staged files
 #+begin_src bash
 git diff --staged
+#+end_src
+** Stash
++ It is used to save the changes you have been working on, but are not ready to be integrated in the main project, and the same time you are forced to integrate into the project everything you have done.
++ For obvious reason you save into the stash all those unfinished changes that will cause troubles in the main project if you integrate them.
++ You only send to integrate the features which are finished and doesn't cause troubles
++ It is not recommended to create several stash, because it could be hard to integrate them into the project because of the possible conflicts the may arise
+*** Create
+**** Create Stash
+#+begin_src bash
+git stash
+#+end_src
+**** Create Stash with a Description (Recommended)
+#+begin_src bash
+git stash save "Your meaningful description goes here"
+#+end_src
+*** List and show all the stash
+**** Simple
+#+begin_src bash
+git stash list
+#+end_src
+**** Descriptive
+#+begin_src bash
+git stash list --stat
+#+end_src
+*** Return
+**** Return and Delete the last stash
++ Return in to the stash and delete it from the stash list
+#+begin_src bash
+git stash pop
+#+end_src
+**** Return to an specific stash
+#+begin_src bash
+git stash apply stash@{2}
+#+end_src
+*** Delete
+**** All
+#+begin_src bash
+git stash clear
+#+end_src
+**** Only one in specific
+#+begin_src bash
+git stash drop stash@{0}
+#+end_src
+*** Show
++ show all the modification that were done in the stash
+#+begin_src bash
+git stash show stash@{1}
 #+end_src
