@@ -32,7 +32,7 @@ This is just a list of git commands to help me to remember and learn them
   - [[#linux-commands-with-git][Linux commands with git?]]
   - [[#see-all-the-copies-made-by-git-for-the-project][See all the copies made by git for the project]]
   - [[#return-the-project-to-an-earlier-stage][Return the project to an earlier stage]]
-  - [[#creating-a-tag-for-github][Creating a Tag for Github]]
+  - [[#tags][Tags]]
   - [[#branches][Branches]]
   - [[#git-diff][Git Diff]]
 
@@ -232,9 +232,32 @@ git log --oneline
 #+begin_src bash
 git checkout -- .
 #+end_src
-** Creating a Tag for Github
+** Tags
+*** Creating
+**** Creating a Tag for Github
++ This first command is not recommended due to lack of information
 #+begin_src bash
+git tag super-release
 git tag 29-10-22v1 -m "First Project Version"
+git tag -a v1.0.0 -m "Version 1.0.0 lista"
+#+end_src
+**** Creating a Tag for an Old Commit
+#+begin_src bash
+git tag -a v0.1.0 d2ac819
+#+end_src
+*** Show
+**** Show the existing Tags
+#+begin_src bash
+git tag
+#+end_src
+**** Display more information of an specific tag
+#+begin_src bash
+git show tagName
+git show v0.1.0
+#+end_src
+*** Deleting Tag
+#+begin_src bash
+git tag -d nameOfMyTag
 #+end_src
 ** Branches
 *** Creating a Branch
@@ -247,8 +270,7 @@ git branch nameOfMyBranch
 #+begin_src bash
 git branch
 git log --oneline
-# only shows the current branch
-git status
+git status # only shows the current branch
 #+end_src
 *** Rename a branch
 #+html: <ul><li><a href="#user-content-setting-main-branch">You can also rename the branch globally</a></li></ul>
@@ -266,12 +288,14 @@ git checkout -b nameOfMyBranch
 *** Merge a branch
 + Return to the main branch and then use the command merge
 #+begin_src bash
-git checkout main
 git merge nameOfMyBranch
 #+end_src
 *** Delete a branch
++ The last two commands are used to force the deletion of the branch
 #+begin_src bash
 git branch -d nameOfMyBranch
+git branch -d nameOfMyBranch -f
+git branch -D nameOfMyBranch
 #+end_src
 ** Git Diff
 *** Show the modifications in the unstaged files
