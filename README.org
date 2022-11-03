@@ -10,6 +10,7 @@
 #+html: <p align="center"><img src="./git.png" /></p>
 ** Description
 This is just a list of git commands to help me to remember and learn them
+Those could be a nice help to work together with others in bootcamps like codeio, 4geeks, and so on, or as a professional developer
 * Menu :toc:
 - [[#about][About]]
   - [[#cover][Cover]]
@@ -36,6 +37,7 @@ This is just a list of git commands to help me to remember and learn them
   - [[#branches][Branches]]
   - [[#git-diff][Git Diff]]
   - [[#stash][Stash]]
+  - [[#rebase][Rebase]]
 
 * PreIntroductory Commands
 ** Check Git Version
@@ -228,10 +230,15 @@ git rm fileName
 git log --oneline
 #+end_src
 ** Return the project to an earlier stage
+*** Everything
 + Rebuild or return the project exactly as it was in the last commit
 + It restore everything except the untracked filed
 #+begin_src bash
 git checkout -- .
+#+end_src
+*** Just one file in specific
+#+begin_src bash
+git checkout -- fileName
 #+end_src
 ** Tags
 *** Creating
@@ -353,4 +360,18 @@ git stash drop stash@{0}
 + show all the modification that were done in the stash
 #+begin_src bash
 git stash show stash@{1}
+#+end_src
+** Rebase
++ Moves the changes from the main branch to the branch you are working on
++ Update your branch with the new content added in main after you created the branch
++ You need to be positioned in your side branch in order to exec the rebase command
+*** Using Rebase to add the new changes from main to your branch
+#+begin_src bash
+git rebase master
+#+end_src
+*** Using Rebase Interactive to merge(squash) split commits
++ You can also this command to edit the commits instead of combining them. Just watch the menu
+For commits before HEAD (4)
+#+begin_src bash
+git rebase -i HEAD~4
 #+end_src
