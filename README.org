@@ -245,7 +245,7 @@ git checkout -- .
 git checkout -- fileName
 #+end_src
 ** Tags
-[[Upload Tags]]
+[[#upload-tags][Upload Tags]]
 *** Creating
 **** Creating a Tag for Github
 + This first command is not recommended due to lack of information
