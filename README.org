@@ -38,6 +38,7 @@ Those could be a nice help to work together with others in bootcamps like codeio
   - [[#git-diff][Git Diff]]
   - [[#stash][Stash]]
   - [[#rebase][Rebase]]
+  - [[#remote][Remote]]
 
 * PreIntroductory Commands
 ** Check Git Version
@@ -375,3 +376,17 @@ For commits before HEAD (4)
 #+begin_src bash
 git rebase -i HEAD~4
 #+end_src
+** Remote
+*** Create Remote
++ Origin is the name for the remote repository
++ We can create several remote repository for one project
+#+begin_src bash
+git remote add origin URL
+#+end_src
+*** Show a list of the Remotes
+command:
+#+begin_src bash
+git remote -v
+#+end_src
+posible output:
+#+html: <p><img src="./img/gitRemote.png" /></p>
