@@ -401,7 +401,14 @@ posible output:
 git push --tags
 #+end_src
 ** Update local repository
+*** Command
 + Use the command pull
 #+begin_src
 git pull
+#+end_src
+*** Warning
+#+html: <p><img src="./img/gitWarning01.png" /></p>
+solution:
+#+begin_src bash
+git config --global pull.ff only
 #+end_src
