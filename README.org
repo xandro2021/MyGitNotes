@@ -241,9 +241,13 @@ git log --oneline
 #+begin_src bash
 git checkout -- .
 #+end_src
-*** Just one file in specific
+*** Just one specific file (last commit)
 #+begin_src bash
 git checkout -- fileName
+#+end_src
+*** Just one specific file to and specific hash (commit)
+#+begin_src bash
+git checkout 762ac65 fileName
 #+end_src
 ** Tags
 [[#upload-tags][Upload Tags]]
