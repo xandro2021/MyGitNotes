@@ -42,6 +42,7 @@ Those could be a nice help to work together with others in bootcamps like codeio
   - [[#remote][Remote]]
   - [[#upload-tags][Upload Tags]]
   - [[#update-local-repository][Update local repository]]
+  - [[#clone-repository][Clone repository]]
 
 * PreIntroductory Commands
 ** Check Git Version
@@ -401,14 +402,32 @@ posible output:
 git push --tags
 #+end_src
 ** Update local repository
-*** Command
+*** Pull
+**** Locally for Git
+***** Command
 + Use the command pull
 #+begin_src
 git pull
 #+end_src
-*** Warning
+***** Warning01
 #+html: <p><img src="./img/gitWarning01.png" /></p>
 solution:
 #+begin_src bash
 git config --global pull.ff only
+#+end_src
+***** Warning02
+#+html: <p><img src="./img/gitWarning02.png" /></p>
+solution:
+#+begin_src bash
+git config --global pull.rebase true
+#+end_src
+*** Fetch
++ Update your local repository without forcing you to make a rebase or a merge
++ Basically, it updata your references in order to see the complete history of your remote repertory
+#+begin_src bash
+git fetch
+#+end_src
+** Clone repository
+#+begin_src bash
+git clone https://github.com/xandro2021/MyGitNotes.git
 #+end_src
