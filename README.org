@@ -163,7 +163,7 @@ git add folderName/*.js
 #+begin_src bash
 git add .
 #+end_src
-*** Add all the directory that contains other directories and files
+*** Add all the directories within a specific folder
 + The css file contains other directories like bootstrap
 #+begin_src bash
 git add css/
