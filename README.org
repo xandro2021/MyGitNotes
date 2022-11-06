@@ -42,6 +42,7 @@ Those could be a nice help to work together with others in bootcamps like codeio
   - [[#remote][Remote]]
   - [[#upload-tags][Upload Tags]]
   - [[#update-local-repository][Update local repository]]
+  - [[#work-flow-in-github][Work-flow in GitHub]]
   - [[#clone-repository][Clone repository]]
 
 * PreIntroductory Commands
@@ -390,8 +391,15 @@ git rebase -i HEAD~4
 *** Create Remote
 + Origin is the name for the remote repository
 + We can create several remote repository for one project
+**** Origin
 #+begin_src bash
 git remote add origin URL
+#+end_src
+**** Upstream
++ Upstream is a the parent repository of your origin repository if it was forked
++ It is a read only repository
+#+begin_src bash
+git remote add upstream URL
 #+end_src
 *** Show a list of the Remotes
 command:
@@ -410,8 +418,14 @@ git push --tags
 **** Locally for Git
 ***** Command
 + Use the command pull
-#+begin_src
+****** Origin (Default)
+#+begin_src bash
 git pull
+#+end_src
+****** Upstream (Other remote)
+#+begin_src bash
+git pull remoteName branchName
+git pull upstream main
 #+end_src
 ***** Warning01
 #+html: <p><img src="./img/gitWarning01.png" /></p>
@@ -431,6 +445,37 @@ git config --global pull.rebase true
 #+begin_src bash
 git fetch
 #+end_src
+** Work-flow in GitHub
+*** Feature Branch
+**** Checking another team member branch (work)
++ All the team member will be working in their own branch
++ You can see their work by executing:
+#+begin_src bash
+git fetch
+git branch -a
+git checkout theBranchOfYourFriend
+#+end_src
+**** Merge your team member branch
++ Any team member can merge another team member branch
+#+begin_src bash
+git checkout master
+git merge yourTeamMemberBranch
+git push
+#+end_src
+**** Alternative to Merge by usig a Pull Request
++ This is an Alternative to the last point (merge)
++ It is more recommended because a pull request will notify the other team member and start a debate about the merging of that feature branch
+#+begin_src bash
+git push origin featuredBranch
+#+end_src
++ The last command will update that branch in GitHub, allowing the user to start a Push Request from there
+**** Working from a featured branch to main in remote (GitHub)
++ Create the branch, move into it, do all the work there to implement the desired feature and then exec the command git push
++ GitHub will tell you which command to use in order to update remote with your local feature branch
+#+begin_src bash
+git push
+#+end_src
++ Finally you create a pull request and merge your featured branch with the main branch
 ** Clone repository
 #+begin_src bash
 git clone https://github.com/xandro2021/MyGitNotes.git
