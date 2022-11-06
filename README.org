@@ -427,6 +427,27 @@ git pull
 git pull remoteName branchName
 git pull upstream main
 #+end_src
+****** Team Work Notes
+******* Pull including Branches References from the remote
++ This will add the information about your team mates branches
+#+begin_src bash
+git pull --all
+#+end_src
+******* List the branches obtained from remote
+#+begin_src bash
+git branch --all
+#+end_src
+******* Change into a team member branch
++ After executing pull --all, you will be able of changing into your team member branch
+#+begin_src bash
+git checkout yourTeamMemberBranch
+#+end_src
+******* Deleting unnecessary branches that were pull from remote
++ The first command only works if the branch has still not being deleted from the remote
+#+begin_src bash
+git push origin :branchName
+git remote prune origin
+#+end_src
 ***** Warning01
 #+html: <p><img src="./img/gitWarning01.png" /></p>
 solution:
