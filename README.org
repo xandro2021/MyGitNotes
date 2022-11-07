@@ -44,6 +44,7 @@ Those could be a nice help to work together with others in bootcamps like codeio
   - [[#update-local-repository][Update local repository]]
   - [[#work-flow-in-github][Work-flow in GitHub]]
   - [[#clone-repository][Clone repository]]
+  - [[#close-issue-outside-of-github][Close Issue outside of Github]]
 
 * PreIntroductory Commands
 ** Check Git Version
@@ -500,4 +501,9 @@ git push
 ** Clone repository
 #+begin_src bash
 git clone https://github.com/xandro2021/MyGitNotes.git
+#+end_src
+** Close Issue outside of Github
++ Use the key word "Fixes #" with the number of the issue in github, and it will automatically close the issue
+#+begin_src bash
+git commit -am "Fixes #5: Done, I've Deleted Capitan Marvel"
 #+end_src
