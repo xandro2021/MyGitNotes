@@ -46,6 +46,8 @@ Those could be a nice help to work together with others in bootcamps like codeio
   - [[#clone-repository][Clone repository]]
   - [[#close-issue-outside-of-github][Close Issue outside of Github]]
   - [[#submodules][Submodules]]
+  - [[#subtree][SubTree]]
+  - [[#worktree][WorkTree]]
 
 * PreIntroductory Commands
 ** Check Git Version
@@ -529,6 +531,42 @@ git commit -am "Fixes #5: Done, I've Deleted Capitan Marvel"
 git submodule add nameOfChildRepository
 #+end_src
 *** GitHub
+**** Add
 #+begin_src bash
 git submodule add URL
 #+end_src
+**** Push
+#+begin_src bash
+git push --recurse-submodules=on-demand
+#+end_src
+**** Load the submodule content when you clone the parent repository
++ You need to mv into the child or submodule to execute the command
+#+begin_src bash
+cd submoduleFolderName
+git submodule init
+git submodule update
+#+end_src
+**** Recursively clone a repository with all its submodules
+#+begin_src bash
+git clone --recurse-submodules URL
+#+end_src
+**** Update a submodule from remote
++ Some times when you clone a repository with its remotes recursively, the references used by the parent repository could be outdated. In order to update those submodules you need to exec the command:
+#+begin_src bash
+git submodule update --remote
+#+end_src
+**** Delete submodule
++ Use the last command to manually delete the section related with the submodule using vim
+#+begin_src bash
+git rm submoduleFolderName
+rm -rvf .git/modules/submoduleFolderName
+git config -e
+#+end_src
++ Then commit the changes and update remote
+#+begin_src bash
+git add .
+git commit -m "modules deleted"
+git push
+#+end_src
+** SubTree
+** WorkTree
