@@ -522,6 +522,7 @@ git clone https://github.com/xandro2021/MyGitNotes.git
 git commit -am "Fixes #5: Done, I've Deleted Capitan Marvel"
 #+end_src
 ** Submodules
+[[https://www.youtube.com/watch?v=ZYq3NJnO08U][Tutorial Submodules]]
 + Basically it is a repository inside another repository.
 + Every repository will have their own history.
 + The parent only knows and notify whenever the child repository is updated.
@@ -569,4 +570,34 @@ git commit -m "modules deleted"
 git push
 #+end_src
 ** SubTree
+[[https://www.youtube.com/watch?v=sC1sfoCo5qY&t=170s][Tutorial Subtree]]
+*** It Different Than Mergin your current repository with another repository
++ Instead of mixing both repositories, a subtree just add in a folder the other repository similar than submodules
+If you want to merge two repositories then the commands could be:
+#+begin_src bash
+git remote add trick https://github.com/nasa/trick ; git merge origin/master
+#+end_src
+*** Installation
++ By Default it comes in a different package in Fedora
+#+begin_src bash
+sudo dnf install git-subtree
+#+end_src
+*** Add a SubTree
++ master is the branch
++ https is URL
++ trick is the folder name in our current repository
+**** Including all the history of the subtree repository
+#+begin_src bash
+git subtree add --prefix=trick https://github.com/nasa/trick master
+#+end_src
+**** Without the history of the subtree repository
++ The squash key word, remove the history of the repository we are cloning as a subtree
+#+begin_src bash
+git subtree add --prefix=trick --squash https://github.com/nasa/trick master
+#+end_src
+*** Change the version of the SubTree
++ Maybe to an older or newer version
+#+begin_src bash
+git subtree merge -P trick --squash ba2df07
+#+end_src
 ** WorkTree
