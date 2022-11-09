@@ -45,6 +45,7 @@ Those could be a nice help to work together with others in bootcamps like codeio
   - [[#work-flow-in-github][Work-flow in GitHub]]
   - [[#clone-repository][Clone repository]]
   - [[#close-issue-outside-of-github][Close Issue outside of Github]]
+  - [[#submodules][Submodules]]
 
 * PreIntroductory Commands
 ** Check Git Version
@@ -381,11 +382,22 @@ git stash show stash@{1}
 #+begin_src bash
 git rebase master
 #+end_src
-*** Using Rebase Interactive to merge(squash) split commits
+*** Using Rebase Interactive to merge(squash) commits
 + You can also this command to edit the commits instead of combining them. Just watch the menu
 For commits before HEAD (4)
 #+begin_src bash
 git rebase -i HEAD~4
+#+end_src
+*** Using Rebase Interactive to edit a commit (split)
++ If your your last commit could be divided in more commits you can use the rebase interactive to do it
++ Uncommit and unstage the files with reset HEAD^
++ make a regular commit for every file
++ To finish the changes, you execute the command git rebase --continue
++ At the end, you will have divided one big commit into several commits as a result of that
+#+begin_src bash
+git rebase -i HEAD~3
+git reset HEAD^
+git rebase --continue
 #+end_src
 * GitHub
 ** Remote
@@ -506,4 +518,17 @@ git clone https://github.com/xandro2021/MyGitNotes.git
 + Use the key word "Fixes #" with the number of the issue in github, and it will automatically close the issue
 #+begin_src bash
 git commit -am "Fixes #5: Done, I've Deleted Capitan Marvel"
+#+end_src
+** Submodules
++ Basically it is a repository inside another repository.
++ Every repository will have their own history.
++ The parent only knows and notify whenever the child repository is updated.
+*** Local
++ You can add a submodule locally with this command
+#+begin_src bash
+git submodule add nameOfChildRepository
+#+end_src
+*** GitHub
+#+begin_src bash
+git submodule add URL
 #+end_src
