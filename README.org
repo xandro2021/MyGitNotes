@@ -42,7 +42,6 @@ Those could be a nice help to work together with others in bootcamps like codeio
   - [[#remote][Remote]]
   - [[#upload-tags][Upload Tags]]
   - [[#update-local-repository][Update local repository]]
-  - [[#work-flow-in-github][Work-flow in GitHub]]
   - [[#clone-repository][Clone repository]]
   - [[#close-issue-outside-of-github][Close Issue outside of Github]]
   - [[#submodules][Submodules]]
@@ -481,7 +480,7 @@ git config --global pull.rebase true
 #+begin_src bash
 git fetch
 #+end_src
-** Work-flow in GitHub
+ ** Work-flow in GitHub
 *** Feature Branch
 **** Checking another team member branch (work)
 + All the team member will be working in their own branch
