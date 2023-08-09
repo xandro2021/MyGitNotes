@@ -214,7 +214,7 @@ git reset --mixed 01cdac6
 + The alphanumeric thing at the end is just an example about a possible visible value from git log in order to return to the expected git copy
 + This command delete all the copies that comes after the selected commit or copy. You return in the time, as if all those commits have never existed before
 #+begin_src bash
-git reset --hard 01cdac6
+git reset --hard ce82803
 #+end_src
 *** Reflog
 + This command is used to preserved a log about all the changes made in the repository, including those that where deleted by reset --hard
