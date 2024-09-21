@@ -47,6 +47,8 @@ Those could be a nice help to work together with others in bootcamps like codeio
   - [[#submodules][Submodules]]
   - [[#subtree][SubTree]]
   - [[#worktree][WorkTree]]
+- [[#recomendations][Recomendations]]
+  - [[#git-pull][Git Pull]]
 
 * PreIntroductory Commands
 ** Check Git Version
@@ -600,3 +602,8 @@ git subtree add --prefix=trick --squash https://github.com/nasa/trick master
 git subtree merge -P trick --squash ba2df07
 #+end_src
 ** WorkTree
+* Recomendations
+** Git Pull
+Para tener un historial de git mas limpio es importante aplicar --rebase y asi evitar el automergin y la creacion de nodos paralelos en el historial de git.
++ git pull --rebase
++ git rebase --abort
